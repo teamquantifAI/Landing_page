@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, TrendingUp, Zap, Shield } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const Header = () => {
@@ -18,10 +18,10 @@ const Header = () => {
   }, [])
 
   const navItems = [
-    { name: 'Services', href: '#services' },
-    { name: 'About', href: '#about' },
-    { name: 'Insights', href: '#insights' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Features', href: '#features', icon: Zap },
+    { name: 'Benefits', href: '#benefits', icon: TrendingUp },
+    { name: 'Security', href: '#security', icon: Shield },
+    { name: 'Pricing', href: '#pricing', icon: TrendingUp },
   ]
 
   return (
@@ -38,11 +38,19 @@ const Header = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2 group">
-            <div className="w-8 h-8 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-lg flex items-center justify-center text-white font-bold text-sm">
-              Q
+          <Link href="/" className="flex items-center space-x-3 group">
+            <div className="relative">
+              <div className="w-10 h-10 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105">
+                <TrendingUp className="w-6 h-6 text-white" />
+              </div>
+              <div className="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-br from-blue-400 to-blue-500 rounded-full flex items-center justify-center">
+                <div className="w-2 h-2 bg-white rounded-full"></div>
+              </div>
             </div>
-            <span className="text-xl font-bold text-gray-900">QuantifAI</span>
+            <div className="hidden sm:block">
+              <span className="text-2xl font-bold gradient-text">quantifAI</span>
+              <div className="text-xs text-gray-500 -mt-1">Portfolio Optimizer</div>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -51,9 +59,10 @@ const Header = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-600 hover:text-gray-900 font-medium transition-colors duration-200"
+                className="group flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium text-gray-700 hover:text-yellow-600 transition-all duration-300 hover:bg-yellow-50"
               >
-                {item.name}
+                <item.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
+                <span>{item.name}</span>
               </Link>
             ))}
           </nav>
@@ -67,10 +76,10 @@ const Header = () => {
               Login
             </Link>
             <Link
-              href="#get-started"
-              className="hidden sm:inline-flex items-center px-6 py-2.5 bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+              href="#early-access"
+              className="hidden sm:inline-flex items-center px-6 py-2.5 bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 text-black font-semibold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
             >
-              Get Started
+              Get Early Access
             </Link>
 
             {/* Mobile menu button */}
@@ -129,9 +138,10 @@ const Header = () => {
                     <Link
                       href={item.href}
                       onClick={() => setIsMenuOpen(false)}
-                      className="block px-4 py-3 rounded-lg hover:bg-yellow-50 text-gray-700 hover:text-yellow-600 font-medium transition-all duration-300"
+                      className="flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-yellow-50 text-gray-700 hover:text-yellow-600 transition-all duration-300"
                     >
-                      {item.name}
+                      <item.icon className="w-5 h-5" />
+                      <span className="font-medium">{item.name}</span>
                     </Link>
                   </motion.div>
                 ))}
@@ -149,11 +159,11 @@ const Header = () => {
                     Login
                   </Link>
                   <Link
-                    href="#get-started"
+                    href="#early-access"
                     onClick={() => setIsMenuOpen(false)}
-                    className="flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-yellow-400 to-amber-500 text-white font-semibold rounded-lg shadow-lg"
+                    className="flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-yellow-400 to-amber-500 text-black font-semibold rounded-full shadow-lg"
                   >
-                    Get Started
+                    Get Early Access
                   </Link>
                 </motion.div>
               </nav>
