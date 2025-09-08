@@ -62,9 +62,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#fbbf24" />
       </head>
       <body className={`${inter.className} antialiased`}>
-        <div className="relative min-h-screen bg-gradient-to-br from-white via-yellow-50/30 to-amber-100/20">
-          {children}
-        </div>
+        {children}
       </body>
     </html>
   )
