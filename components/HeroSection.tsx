@@ -9,6 +9,18 @@ const HeroSection = () => {
   const controls = useAnimation()
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
 
+  const handleScrollToNext = () => {
+    // Get the hero section height to scroll to the next section
+    const heroSection = document.querySelector('section')
+    if (heroSection) {
+      const nextSectionTop = heroSection.offsetHeight
+      window.scrollTo({
+        top: nextSectionTop - 80, // Account for fixed header
+        behavior: 'smooth'
+      })
+    }
+  }
+
   useEffect(() => {
     controls.start({
       opacity: 1,
@@ -112,19 +124,9 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.8 }}
-              className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight mb-8 leading-tight"
+              className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight mb-8 leading-tight"
             >
-              Transform Your{' '}
-              <span className="relative">
-                <span className="gradient-text">Portfolio</span>
-                <motion.div
-                  className="absolute -bottom-2 left-0 right-0 h-2 bg-gradient-to-r from-yellow-400 to-amber-500 rounded-full"
-                  initial={{ scaleX: 0 }}
-                  animate={{ scaleX: 1 }}
-                  transition={{ delay: 1, duration: 0.8 }}
-                />
-              </span>{' '}
-              with AI Intelligence
+              Transform Your <span className="relative"><span className="gradient-text">Portfolio</span><motion.div className="absolute -bottom-2 left-0 right-0 h-2 bg-gradient-to-r from-yellow-400 to-amber-500 rounded-full" initial={{ scaleX: 0 }} animate={{ scaleX: 1 }} transition={{ delay: 1, duration: 0.8 }} /></span> with Intelligence
             </motion.h1>
 
             {/* Subtitle */}
@@ -149,18 +151,16 @@ const HeroSection = () => {
               className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
             >
               <Link
-                href="#early-access"
+                href="https://calendly.com/mariana-quantifai/quantifai"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 text-black font-bold rounded-full shadow-2xl hover:shadow-yellow-500/25 transform hover:scale-105 transition-all duration-300"
               >
-                <span className="mr-2">Start Free Trial</span>
+                <span className="mr-2">Get Early Access</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-yellow-300 to-amber-400 blur opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
               </Link>
 
-              <button className="group inline-flex items-center px-8 py-4 bg-white/80 backdrop-blur-sm hover:bg-white border-2 border-gray-200 hover:border-yellow-300 text-gray-700 hover:text-yellow-700 font-semibold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-                <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-300" />
-                Watch Demo
-              </button>
             </motion.div>
           </motion.div>
 
@@ -198,7 +198,8 @@ const HeroSection = () => {
             <motion.div
               animate={{ y: [0, 10, 0] }}
               transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-              className="inline-flex items-center justify-center w-12 h-12 bg-white/80 backdrop-blur-sm rounded-full shadow-lg cursor-pointer hover:bg-white transition-colors duration-300"
+              onClick={handleScrollToNext}
+              className="inline-flex items-center justify-center w-12 h-12 bg-white/80 backdrop-blur-sm rounded-full shadow-lg cursor-pointer hover:bg-white hover:scale-110 transition-all duration-300"
             >
               <ChevronDown className="w-6 h-6 text-gray-600" />
             </motion.div>

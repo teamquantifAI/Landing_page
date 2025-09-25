@@ -31,7 +31,7 @@ const DashboardSection = () => {
             Real-Time Financial Dashboard
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Monitor your investments and track performance with our advanced analytics platform
+            Monitor your investments and track performance with our advanced&nbsp;analytics&nbsp;platform
           </p>
         </motion.div>
 
