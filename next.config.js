@@ -8,13 +8,10 @@ const nextConfig = {
   basePath: '',
   trailingSlash: true,
   swcMinify: false,
-  webpack: (config, { dev, isServer }) => {
-    // Disable CSS optimization
-    if (!dev && !isServer) {
-      config.optimization.minimizer = config.optimization.minimizer.filter(
-        (minimizer) => !minimizer.constructor.name.includes('Css')
-      );
-    }
+  productionBrowserSourceMaps: false,
+  webpack: (config, { dev }) => {
+    // Completely disable CSS minification
+    config.optimization.minimize = false;
     return config;
   },
   async headers() {
