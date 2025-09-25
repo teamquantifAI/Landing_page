@@ -1,9 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
   images: {
     domains: [],
-    unoptimized: false,
+    unoptimized: true,
   },
+  basePath: '',
+  trailingSlash: true,
   async headers() {
     return [
       {
