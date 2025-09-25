@@ -9,7 +9,7 @@ const WhyQuantifAISection = () => {
     {
       icon: Search,
       title: 'Total Portfolio Transparency',
-      description: 'Every trade comes with a rationale. Our AI breaks down market conditions, asset behaviors, and strategy alignment — so you always know the \'why\' behind the \'what.\'',
+      description: 'Every trade comes with a rationale. Our AI breaks down market conditions, asset behaviors, and strategy alignment so you always know the \'why\' behind the \'what.\'',
       bgColor: 'bg-yellow-50'
     },
     {
