@@ -7,17 +7,17 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4.0-38B2AC)](https://tailwindcss.com/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-## ✨ Features
+## Features
 
-- 🚀 **Modern Tech Stack**: Built with Next.js 14, TypeScript, and Tailwind CSS
-- 🎨 **Redesigned UI**: Clean, modern interface with improved user experience
-- 📱 **Responsive Design**: Mobile-first approach with seamless cross-device compatibility  
-- 🎭 **Smooth Animations**: Framer Motion powered interactions and micro-animations
-- 🎯 **AI-Powered Insights**: Transparent portfolio analysis and optimization recommendations
-- 🔒 **Enterprise Security**: Built with security best practices for financial data
-- ⚡ **Performance Optimized**: Fast loading times and excellent Core Web Vitals
+- **Modern Tech Stack**: Built with Next.js 14, TypeScript, and Tailwind CSS
+- **Redesigned UI**: Clean, modern interface with improved user experience
+- **Responsive Design**: Mobile-first approach with seamless cross-device compatibility  
+- **Smooth Animations**: Framer Motion powered interactions and micro-animations
+- **AI-Powered Insights**: Transparent portfolio analysis and optimization recommendations
+- **Enterprise Security**: Built with security best practices for financial data
+- **Performance Optimized**: Fast loading times and excellent Core Web Vitals
 
-## 🎯 What is quantifAI?
+## What is quantifAI?
 
 quantifAI transforms how financial advisors manage and optimize client portfolios. Our AI-powered platform provides:
 
@@ -27,7 +27,7 @@ quantifAI transforms how financial advisors manage and optimize client portfolio
 - **Alternative Asset Integration**: Comprehensive analysis including cryptocurrency and other alternatives
 - **Risk Assessment**: Advanced risk modeling and tolerance alignment
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -70,7 +70,7 @@ quantifAI transforms how financial advisors manage and optimize client portfolio
 - `npm run lint` - Run ESLint
 - `npm run type-check` - Run TypeScript type checking
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 quantifai-portfolio-optimizer/
@@ -91,7 +91,7 @@ quantifai-portfolio-optimizer/
 └── package.json              # Project dependencies
 ```
 
-## 🎨 Design System
+## Design System
 
 ### Colors
 
@@ -114,7 +114,7 @@ quantifai-portfolio-optimizer/
 - **Hover States**: Smooth scale and shadow transitions
 - **Animations**: Framer Motion with ease-out timing
 
-## 🔧 Configuration
+## Configuration
 
 ### Environment Variables
 
@@ -133,7 +133,7 @@ The project uses a custom Tailwind configuration with:
 - Container utilities with responsive padding
 - Typography plugin for rich text content
 
-## 🚧 Roadmap
+## Roadmap
 
 - [ ] **Portfolio Analysis Dashboard** - Interactive charts and insights
 - [ ] **Authentication System** - Secure advisor login and management
@@ -143,7 +143,7 @@ The project uses a custom Tailwind configuration with:
 - [ ] **Reporting System** - Automated portfolio reports
 - [ ] **Mobile App** - React Native companion app
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
 
@@ -153,17 +153,17 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 📧 Contact
+## Contact
 
 - **Website**: [quantifai.co](https://quantifai.co)
 - **Email**: team@quantifai.co
 - **GitHub**: [@saivedant169](https://github.com/saivedant169)
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Design inspiration from modern fintech applications
 - Framer Motion for smooth animations
@@ -172,4 +172,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Built with ❤️ by the quantifAI team**
+**Built by the quantifAI team**
