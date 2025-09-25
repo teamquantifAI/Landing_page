@@ -7,6 +7,7 @@ const nextConfig = {
   },
   basePath: '',
   trailingSlash: true,
+  swcMinify: false,
   async headers() {
     return [
       {

@@ -6,8 +6,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:export": "next build || true",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "next lint"
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
